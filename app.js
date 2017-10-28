@@ -15,21 +15,24 @@ app.use(express.static(rootPath));
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/web/main.html'));
-    res.setHeader('Content-Type', 'application/json');
-    // predict the contents of an image by passing in a url
-    clarifai.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-north.jpg').then(
-        function(response) {
-            console.log(response);
-        },
-        function(err) {
-            console.error(err);
-        }
-    );
 });
 
 // instantiate a new Clarifai app passing in your api key.
 
 
+
+/*
+res.setHeader('Content-Type', 'application/json');
+// predict the contents of an image by passing in a url
+clarifai.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-north.jpg').then(
+    function(response) {
+        console.log(response);
+    },
+    function(err) {
+        console.error(err);
+    }
+);
+*/
 
 
 
