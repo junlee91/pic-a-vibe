@@ -1,40 +1,44 @@
 'use strict';
 
-const https = require('https');
-const express = require('express');
-const path = require('path');
-const app = express();
-const bodyParser = require('body-parser');
-const rootPath = path.normalize(__dirname);
+var https = require('https');
+var express = require('express');
+var path = require('path');
+var app = express();
+var bodyParser = require('body-parser');
+
+
+
+var rootPath = path.normalize(__dirname);
 console.log(rootPath);
-const Clarifai = require('clarifai');
-const clarifai = new Clarifai.App({
+var Clarifai = require('clarifai');
+var clarifai = new Clarifai.App({
     apiKey: 'ba6f72aba3a14dfdb182df5ed331c34c'
 });
+
 
 // Replace the subscriptionKey string value with your valid subscription key.
 var subscriptionKey = 'e8a773af38224a4599c100eb52314f48';
 
 
+rootPath += "/web";
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static(rootPath));
 
-
 app.get('/', function(req, res) {
-    res.send('/web');
+    console.log(rootPath);
+    res.sendFile(rootPath+ '/main.html');
 });
 
 
+
 app.get('/search/:searchText', function(req, res) {
-    console.log("asdfasdfasdf");
     // Verify the endpoint URI.  At this writing, only one endpoint is used for Bing
 // search APIs.  In the future, regional endpoints may be available.  If you
 // encounter unexpected authorization errors, double-check this host against
 // the endpoint for your Bing Web search instance in your Azure dashboard.
     var host = 'api.cognitive.microsoft.com';
     var bingPath = '/bing/v7.0/images/search';
-    console.log("asdfasdfasdfasdf");
     var term = req.params.searchText;
 
     var response_handler = function (response) {
@@ -80,10 +84,6 @@ app.get('/search/:searchText', function(req, res) {
     }
 
 });
-
-
-
-
 
 
 //app.get('/users/:userId/books/:bookId', function (req, res) {
