@@ -27,14 +27,15 @@ app.get('/', function(req, res) {
 
 
 app.get('/search/:searchText', function(req, res) {
+    console.log("asdfasdfasdf");
     // Verify the endpoint URI.  At this writing, only one endpoint is used for Bing
 // search APIs.  In the future, regional endpoints may be available.  If you
 // encounter unexpected authorization errors, double-check this host against
 // the endpoint for your Bing Web search instance in your Azure dashboard.
     var host = 'api.cognitive.microsoft.com';
-    var bingPath = '/bing/v7.0/search';
-
-    var term = req.body;
+    var bingPath = '/bing/v7.0/images/search';
+    console.log("asdfasdfasdfasdf");
+    var term = req.params.searchText;
 
     var response_handler = function (response) {
         var body = '';
@@ -69,7 +70,7 @@ app.get('/search/:searchText', function(req, res) {
 
         var req = https.request(request_params, response_handler);
         req.end();
-    }
+    };
 
     if (subscriptionKey.length === 32) {
         bing_web_search(term);
