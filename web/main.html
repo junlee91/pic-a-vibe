@@ -16,14 +16,21 @@
 <body ng-app="picaVibe">
 	<div ng-controller="mainController">
 		<div class="container" align="center">
-			<h1>Pic-a-Vibe</h1>
-			
-			<li ng-repeat="x in res">{{x}}</li>
-
+			<div class="row">
+				<h1>Pic-a-Vibe</h1>
+				<li ng-repeat="x in res">{{x}}</li>
+			</div>
+			<div class="row">
+				{{sound}}
+			</div>
 
 		</div>
+
+
+
 	</div>
 	<script src="vendor/angular.min.js"></script>
 	<script src="picavibe.js"></script>
+	<script src="freeSoundController.js"></script>
 </body>
 </html>
