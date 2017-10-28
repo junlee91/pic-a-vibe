@@ -30,8 +30,6 @@ app.get('/', function(req, res) {
     res.sendFile(rootPath+ '/main.html');
 });
 
-
-
 app.get('/search/:searchText', function(req, res) {
     // Verify the endpoint URI.  At this writing, only one endpoint is used for Bing
 // search APIs.  In the future, regional endpoints may be available.  If you
@@ -54,7 +52,9 @@ app.get('/search/:searchText', function(req, res) {
                     console.log(header + ": " + response.headers[header]);
             body = JSON.stringify(JSON.parse(body), null, '  ');
             console.log('\nJSON Response:\n');
-            console.log(body);
+            res.send(body);
+
+
         });
         response.on('error', function (e) {
             console.log('Error: ' + e.message);
@@ -82,6 +82,7 @@ app.get('/search/:searchText', function(req, res) {
         console.log('Invalid Bing Search API subscription key!');
         console.log('Please paste yours into the source code.');
     }
+
 
 });
 
