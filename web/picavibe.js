@@ -8,9 +8,9 @@ picaVibe.controller('mainController',
         $http({
             url: "/search/forest",
             method: "GET"
-
         }).then(function successCallback(response) {
             console.log(response);
+
         }, function errorCallback(response) {
             console.log("Ooops your http request failed.");
         });
