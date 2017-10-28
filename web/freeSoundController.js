@@ -9,7 +9,7 @@ picaVibe.controller('freeSoundController',
             method: "GET"
         }).then(function(res) {
             $scope.sound = res.body;
-            console.log(res);
+            console.log(res.data);
         }, function(err) {
             console.log(err);
         });

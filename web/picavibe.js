@@ -11,7 +11,7 @@ picaVibe.controller('mainController',
         }).then(function successCallback(response) {
             console.log(response);
             var array = response.data.value;
-            $scope.res = array.contentUrl[0];
+            //$scope.res = array.contentUrl[0];
         }, function errorCallback(response) {
             console.log("Ooops your http request failed.");
         });
