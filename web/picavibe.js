@@ -8,10 +8,8 @@ picaVibe.controller('mainController',
         $http({
             url: "/search/forest",
             method: "GET"
-
         }).then(function successCallback(response) {
             console.log(response);
-            
             var array = response.data.value;
             $scope.res = array;
 
@@ -35,3 +33,5 @@ app.controller('myCtrl', function($scope, $http) {
 });
 
     */
+
+

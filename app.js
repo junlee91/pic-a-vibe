@@ -38,7 +38,6 @@ app.get('/search/:searchText', function(req, res) {
     var host = 'api.cognitive.microsoft.com';
     var bingPath = '/bing/v7.0/images/search';
     var term = req.params.searchText;
-
     var response_handler = function (response) {
         var body = '';
         response.on('data', function (d) {
@@ -53,8 +52,6 @@ app.get('/search/:searchText', function(req, res) {
             body = JSON.stringify(JSON.parse(body), null, '  ');
             console.log('\nJSON Response:\n');
             res.send(body);
-
-
         });
         response.on('error', function (e) {
             console.log('Error: ' + e.message);
