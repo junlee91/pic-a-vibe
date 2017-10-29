@@ -12,21 +12,28 @@
 	<link rel="stylesheet" href="style.css" />
 
 </head>
+
 <body ng-app="picaVibe">
-	<div class="container" align="center">
-		<h1>Pic-a-Vibe</h1>
-		<div class="row">
-			<form name="input-search" ng-submit="add()">
-  				<div class="input-group">
-					<input type="text" class="form-control" placeholder="eg) City Blue" minlength="3">
-					
-					<span class="input-group-button">
-           				<button class="btn btn-success" type="submit">vibe</button>
-          			</span>
-          		</div>
-          	</form>
-			</div>
-		</div>
+	<!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container-fluid">
+    		<div class="collapse navbar-collapse" id="myNavbar" style="margin-left: 50px">
+      			<div class="col-sm-10">
+          			<form>
+            			<div class="form-group">
+                			<input type="text" class="form-control" id="usr">
+            			</div>
+          			</form>
+      			</div>
+      			<div class="col-sm-2">
+        			<button type="button" class="btn btn-primary">Vibe</button>
+      			</div>
+    		</div>
+  		</div>
+    </nav>
+
+	<div class="container" align="center" style="margin-top: 150px">
+	
 	</div>
 
 	<div ng-controller="mainController">
