@@ -67,12 +67,11 @@ picaVibe.controller('freeSoundController',
         $scope.fileNames = [];
         for(i=0; i<length; i++){
             for(var j=0; j<53; j++) {
-                console.log("keyword: " + keywords[i]);
-                console.log("category: " + categories[j]);
+
                 if(categories[j] === keywords[i]) {
                     matched.push(keywords[i]);
                     var ran = Math.floor(Math.random() * files[keywords[i]].length);
-                    console.log("fileName: " + files[keywords[i]][ran]);
+
                     $scope.fileNames.push(files[keywords[i]][ran]);
                     break;
                 }
@@ -81,13 +80,13 @@ picaVibe.controller('freeSoundController',
 
         var matchedLength = matched.length;
         for(var i=0; i<matchedLength; i++){
-            console.log("matched category: " + matched[i]);
+
         }
 
         var fileNameLength = $scope.fileNames.length;
         for(var i=0; i<fileNameLength; i++) {
             $scope.fileNames[i] = "vendor/sound/" + $scope.fileNames[i];
-            console.log("filename: " + $scope.fileNames[i]);
+
         }
 
     });
