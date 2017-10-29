@@ -1,6 +1,7 @@
 'use strict';
 picaVibe.controller('freeSoundController',
     function freeSoundController($scope, $http) {
+        console.log("free sound controller");
         var files = {
             "forest": ["216216__crickets.wav", "223640__tree2.wav", "231537__forest.wav", "362253__leaves2.mp3"],
             "bird": ["339326__bird.wav", "398736__bird2.wav"],
@@ -57,21 +58,35 @@ picaVibe.controller('freeSoundController',
             "zoo": ["401190__zoo.wav"]
         };
 
-        var clientSecret = "GpZKE6sqHZGYDthQstHOZnIZAcp8TUpbBJ9vOW0n";
-        var clientId = "cZ7SiCJuAIK9gxZVKx47";
-        var keyword = ["forest, trees, river, water"];
+        //var clientSecret = "GpZKE6sqHZGYDthQstHOZnIZAcp8TUpbBJ9vOW0n";
+        //var clientId = "cZ7SiCJuAIK9gxZVKx47";
+        var keywords = ["forest", "lol", "ffr", "zz"];
+        var length = keywords.length;
+        var categories = Object.keys(files);
+        var matched = [];
+        $scope.fileNames = [];
+        for(i=0; i<length; i++){
+            for(var j=0; j<53; j++) {
+                console.log("keyword: " + keywords[i]);
+                console.log("category: " + categories[j]);
+                if(categories[j] === keywords[i]) {
+                    matched.push(keywords[i]);
+                    var ran = Math.floor(Math.random() * files[keywords[i]].length);
+                    console.log("fileName: " + files[keywords[i]][ran]);
+                    $scope.fileNames.push(files[keywords[i]][ran]);
+                    break;
+                }
+            }
+        }
 
+        var matchedLength = matched.length;
+        for(var i=0; i<matchedLength; i++){
+            console.log("matched category: " + matched[i]);
+        }
 
-        $http({
-            url: "https://freesound.org/apiv2/search/text/?token=" + clientSecret + "&query=" + keyword,
-            method: "GET"
-        }).then(function(res) {
-            $scope.sound = res.body;
-            console.log(res.data);
-        }, function(err) {
-            console.log(err);
-        });
-
-
+        var fileNameLength = $scope.fileNames.length;
+        for(var i=0; i<fileNameLength; i++) {
+            console.log("filename: " + $scope.fileNames[i]);
+        }
 
     });
