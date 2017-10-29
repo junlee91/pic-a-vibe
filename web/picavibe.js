@@ -1,10 +1,17 @@
 'use strict';
 var picaVibe = angular.module('picaVibe', []);
 
+picaVibe.controller('inputController',
+    function inputController($scope){
+        // $scope.add = function(string){
+        //     console.log(string);
+        // }
+    });
+
 picaVibe.controller('mainController',
     function mainController($scope, $http) {
         $http({
-            url: "/search/forest",
+            url: "/search/Chicago",
             method: "GET"
         }).then(function successCallback(response) {
             console.log(response);
