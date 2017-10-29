@@ -28,6 +28,9 @@ img{
     	/*background-image: url('img/giphy.gif');*/
 }
 
+.my-audio {
+	margin: 5px;
+}
 
 .navbar{
     margin-bottom: 0;
@@ -38,7 +41,6 @@ img{
     opacity:1.0;
 }
 
-<<<<<<< HEAD
 .navbar-custom {
   background: #2C3E50;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -109,13 +111,8 @@ img{
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
-=======
-   		background-repeat: no-repeat;
-    	background-size: contain;
-    	background-image: url('img/giphy.gif');
 }
 
 .vibe-button {
 	margin: 10px;
->>>>>>> master
 }
