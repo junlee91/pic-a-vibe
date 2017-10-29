@@ -1,8 +1,14 @@
 body{
     background-color: rgb(255, 241, 226);
+    background-image: url(img/background_coffee_music.jpg);
+    background-size: cover;
 }
 
-img {
+img{
+  background-size: cover;
+}
+
+.placeholder {
     	opacity: 1.0;
     	filter: alpha(opacity=100); /* For IE8 and earlier */
     	width:300px; 
@@ -11,17 +17,15 @@ img {
 		  margin: 20px 20px;
 	}
 
-img:hover {
+.placeholder:hover {
     	opacity: 0.5;
     	filter: alpha(opacity=50); /* For IE8 and earlier */
 	}
 
 .placeholder {
-   		background-repeat: no-repeat;
-    	background-size: contain;
       width:300px; 
       height:200px; 
-    	background-image: url('img/giphy.gif');
+    	/*background-image: url('img/giphy.gif');*/
 }
 
 

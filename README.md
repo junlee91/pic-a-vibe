@@ -29,14 +29,3 @@ the ability for a user to upload a picture from a local drive to create a vibe a
 
 
 
-
-
-
-
-
-
-<<<<<<< HEAD
- 
-=======
- 
->>>>>>> master
