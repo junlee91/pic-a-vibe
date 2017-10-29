@@ -84,7 +84,7 @@ app.get('/analyze/:url', function(req, res) {
     var url = req.params["url"];
     console.log(url);
 
-    clarifai.models.predict(Clarifai.GENERAL_MODEL, "https://samples.clarifai.com/metro-north.jpg").then(
+    clarifai.models.predict(Clarifai.GENERAL_MODEL, url).then(
         function(response) {
             res.setHeader('Content-Type', 'application/json');
             console.log(response);

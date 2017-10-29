@@ -58,11 +58,11 @@ picaVibe.controller('mainController',
             "coffee": ["133097__people chatting.wav", "149466__coffee.wav", "165280__cafe.wav", "334153_glass.mp3"],
             "stream": ["339324__stream.wav", "365921__stream2.wav"],
             "water": ["339324__stream.wav", "365921__stream2.wav"],
-            "trees": ["216216__crickets.wav", "223640tree2.wav", "231537__forest.wav", "362253__leaves2.mp3"],
+            "tree": ["216216__crickets.wav", "223640tree2.wav", "231537__forest.wav", "362253__leaves2.mp3"],
             "door": ["168650__door.wav", "386770__door creaking.wav"],
             "train": ["157873__train.wav"],
             "rain": ["344430__rain.mp3"],
-            "stars": ["62487__campfire.wav", "62489__night.wav", "257941__night.wav"],
+            "star": ["62487__campfire.wav", "62489__night.wav", "257941__night.wav"],
             "dog": ["155382__dogs.wav", "365089__dogs.wav"],
             "puppy": ["365089__dogs.wav", "155382__dogs.wav"],
             "dogs": ["155382__dogs.wav"],
@@ -106,6 +106,7 @@ picaVibe.controller('mainController',
             console.log("inside of the get sounds function");
             console.log(arr);
             var keywords = arr.concepts;
+            console.log(keywords);
             var length = keywords.length;
             var categories = Object.keys(files);
             var matched = [];
