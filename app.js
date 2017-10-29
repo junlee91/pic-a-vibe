@@ -84,8 +84,7 @@ app.get('/search/:searchText', function(req, res) {
 //app.get('/users/:userId/books/:bookId', function (req, res) {
 app.get('/analyze/:url', function(req, res) {
     console.log("this is the backend!!");
-    var url = req.param["url"];
-    console.log(url);
+    var url = req.params["url"];
     clarifai.models.predict(Clarifai.GENERAL_MODEL, url).then(
         function(response) {
             response.setHeader('Content-Type', 'application/json');
