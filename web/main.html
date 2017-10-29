@@ -13,7 +13,6 @@
 
 </head>
 <body ng-app="picaVibe">
-
 	<div class="container" align="center">
 		<h1>Pic-a-Vibe</h1>
 		<div class="row">
@@ -41,14 +40,18 @@
 						ng-repeat="x in res" 
 						ng-click="onclick(x.contentUrl)"
 					/>
+				</div>
 			</div>
 		</div>
-
-	<div ng-controller="freeSoundController" class="row">
-		{{sound}}
 	</div>
-
-
+		
+	<div ng-controller="freeSoundController" class="row" align="center">
+		<div>
+			<audio ng-repeat="file in fileNames" controls loop>
+				<source src="{{file}}">
+			</audio>
+		</div>
+	</div>
 	</div>
 	<script src="vendor/angular.min.js"></script>
 	<script src="picavibe.js"></script>
