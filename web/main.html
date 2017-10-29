@@ -27,8 +27,7 @@
 			<div class="row">
 				<div class="gallery">
 					<img
-						class="placeholder" 
-						ng-controller="eventController"
+						class="placeholder"
 						ng-src="{{x.contentUrl}}" ng-alt="img/no_img.jpg"
 						ng-repeat="x in res" 
 						ng-click="onclick(x.contentUrl)"
@@ -38,7 +37,7 @@
 
 	</div>
 		
-	<div ng-controller="freeSoundController" class="row" align="center">
+	<div class="row" align="center">
 		<div>
 			<audio ng-repeat="file in fileNames" controls loop>
 				<source src="{{file}}">
@@ -48,7 +47,5 @@
 	</div>
 	<script src="vendor/angular.min.js"></script>
 	<script src="picavibe.js"></script>
-	<script src="freeSoundController.js"></script>
-	<script src="event.js"></script>
 </body>
 </html>
