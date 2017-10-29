@@ -10,8 +10,11 @@ picaVibe.controller('eventController',
                 url: "/analyze/" + $scope.encodeURL,
                 method: "GET"
             }).then(function successCallback(response) {
-            	console.log("asdbasdfasdfasdfasdfasdf");
                 console.log(response);
+                var arr = [];
+                arr = response.data.outputs[0].data;
+
+
             }, function errorCallback(response) {
                 console.log("Ooops your http request failed.");
             });

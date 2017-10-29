@@ -84,11 +84,11 @@ app.get('/analyze/:url', function(req, res) {
     var url = req.params["url"];
     console.log(url);
 
-
     clarifai.models.predict(Clarifai.GENERAL_MODEL, "https://samples.clarifai.com/metro-north.jpg").then(
         function(response) {
             res.setHeader('Content-Type', 'application/json');
             console.log(response);
+            res.send(response);
         },
         function(err) {
             console.log(err);
@@ -98,7 +98,6 @@ app.get('/analyze/:url', function(req, res) {
 
 
 // instantiate a new Clarifai app passing in your api key.
-
 // predict the contents of an image by passing in a url
 
 app.listen(8000);
