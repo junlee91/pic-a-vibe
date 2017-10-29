@@ -3,6 +3,13 @@
 console.log("angularjs.js is connected");
 var picaVibe = angular.module('picaVibe', []);
 
+picaVibe.controller('inputController',
+    function inputController($scope){
+        // $scope.add = function(string){
+        //     console.log(string);
+        // }
+    });
+
 picaVibe.controller('mainController',
     function mainController($scope, $http) {
         $http({

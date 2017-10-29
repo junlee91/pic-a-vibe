@@ -4,5 +4,5 @@ picaVibe.controller('eventController',
 		$scope.onclick = function(obj){
 			console.log(obj);
 		}
-	})
+	});
 

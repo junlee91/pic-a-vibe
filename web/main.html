@@ -13,10 +13,26 @@
 
 </head>
 <body ng-app="picaVibe">
+
+	<div class="container" align="center">
+		<h1>Pic-a-Vibe</h1>
+		<div class="row">
+			<form name="input-search" ng-submit="add()">
+  				<div class="input-group">
+					<input type="text" class="form-control" placeholder="eg) City Blue" minlength="3">
+					
+					<span class="input-group-button">
+           				<button class="btn btn-success" type="submit">vibe</button>
+          			</span>
+          		</div>
+          	</form>
+			</div>
+		</div>
+	</div>
+
 	<div ng-controller="mainController">
 		<div class="container" align="center">
 			<div class="row">
-				<h1>Pic-a-Vibe</h1>
 				<div class="gallery">
 					<img
 						class="placeholder" 
