@@ -7,7 +7,6 @@ var app = express();
 var bodyParser = require('body-parser');
 
 
-
 var rootPath = path.normalize(__dirname);
 console.log(rootPath);
 var Clarifai = require('clarifai');
@@ -79,24 +78,27 @@ app.get('/search/:searchText', function(req, res) {
         console.log('Invalid Bing Search API subscription key!');
         console.log('Please paste yours into the source code.');
     }
-
-
 });
 
 
 //app.get('/users/:userId/books/:bookId', function (req, res) {
+app.get('/analyze/:url', function(req, res) {
+    var url = req.param.url;
+    console.log(url);
+    clarifai.models.predict(Clarifai.GENERAL_MODEL, url).then(
+        function(response) {
+            response.setHeader('Content-Type', 'application/json');
+            console.log(response);
+            response.send(response);
+        },
+        function(err) {
+            console.error(err);
+        }
+    );
+});
 
 /*
-clarifai.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-north.jpg').then(
-    function(response) {
-        response.setHeader('Content-Type', 'application/json');
-        console.log(response);
-        response.send(response);
-    },
-    function(err) {
-        console.error(err);
-    }
-);
+
 */
 
 
