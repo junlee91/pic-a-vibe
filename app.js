@@ -85,6 +85,7 @@ app.get('/search/:searchText', function(req, res) {
 app.get('/analyze/:url', function(req, res) {
     console.log("this is the backend!!");
     var url = req.params["url"];
+    console.log(url);
     clarifai.models.predict(Clarifai.GENERAL_MODEL, url).then(
         function(response) {
             response.setHeader('Content-Type', 'application/json');
@@ -98,6 +99,7 @@ app.get('/analyze/:url', function(req, res) {
 });
 
 /*
+ http://cdn.wonderfulengineering.com/wp-content/uploads/2016/01/Chicago-Wallpaper-4.jpg
 
 */
 

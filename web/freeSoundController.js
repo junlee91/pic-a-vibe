@@ -71,7 +71,6 @@ picaVibe.controller('freeSoundController',
                 if(categories[j] === keywords[i]) {
                     matched.push(keywords[i]);
                     var ran = Math.floor(Math.random() * files[keywords[i]].length);
-
                     $scope.fileNames.push(files[keywords[i]][ran]);
                     break;
                 }
@@ -80,7 +79,6 @@ picaVibe.controller('freeSoundController',
 
         var matchedLength = matched.length;
         for(var i=0; i<matchedLength; i++){
-
         }
 
         var fileNameLength = $scope.fileNames.length;
