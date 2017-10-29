@@ -11,32 +11,6 @@
 
 	<link rel="stylesheet" href="style.css" />
 
-	<style>
-	img {
-    	opacity: 1.0;
-    	filter: alpha(opacity=100); /* For IE8 and earlier */
-	}
-
-	img:hover {
-    	opacity: 0.5;
-    	filter: alpha(opacity=50); /* For IE8 and earlier */
-	}
-
-	img.center {
-    	display: block;
-    	margin: 0 auto;
-	}
-
-	.placeholder {
-
-   		background-repeat: no-repeat;
-    	background-size: contain;
-    	background-image: url('img/giphy.gif');
-	}
-
-
-	</style>
-
 </head>
 <body ng-app="picaVibe">
 	<div ng-controller="mainController">
@@ -49,8 +23,6 @@
 						ng-controller="eventController"
 						ng-src="{{x.contentUrl}}" ng-alt="img/no_img.jpg"
 						ng-repeat="x in res" 
-						style="width:300px; height:200px; border-radius: 8px;
-						margin: 20px 20px";
 						ng-click="onclick(x.contentUrl)"
 					/>
 			</div>
