@@ -8,10 +8,9 @@ var bodyParser = require('body-parser');
 
 
 var rootPath = path.normalize(__dirname);
-console.log(rootPath);
 var Clarifai = require('clarifai');
 var clarifai = new Clarifai.App({
-    apiKey: 'ba6f72aba3a14dfdb182df5ed331c34c'
+    apiKey: 'b1008dff763a48408afe1443101d3c41'
 });
 
 
@@ -25,7 +24,6 @@ app.use(bodyParser.json());
 app.use(express.static(rootPath));
 
 app.get('/', function(req, res) {
-    console.log(rootPath);
     res.sendFile(rootPath+ '/main.html');
 });
 
@@ -81,27 +79,22 @@ app.get('/search/:searchText', function(req, res) {
 });
 
 
-//app.get('/users/:userId/books/:bookId', function (req, res) {
 app.get('/analyze/:url', function(req, res) {
     console.log("this is the backend!!");
     var url = req.params["url"];
     console.log(url);
-    clarifai.models.predict(Clarifai.GENERAL_MODEL, url).then(
+
+
+    clarifai.models.predict(Clarifai.GENERAL_MODEL, "https://samples.clarifai.com/metro-north.jpg").then(
         function(response) {
-            response.setHeader('Content-Type', 'application/json');
+            res.setHeader('Content-Type', 'application/json');
             console.log(response);
-            response.send(response);
         },
         function(err) {
-            console.error(err);
+            console.log(err);
         }
     );
 });
-
-/*
- http://cdn.wonderfulengineering.com/wp-content/uploads/2016/01/Chicago-Wallpaper-4.jpg
-
-*/
 
 
 // instantiate a new Clarifai app passing in your api key.
