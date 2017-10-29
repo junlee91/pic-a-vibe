@@ -14,4 +14,8 @@ picaVibe.controller('mainController',
         }, function errorCallback(response) {
             console.log("Ooops your http request failed.");
         });
+
+
+
+        
     });
