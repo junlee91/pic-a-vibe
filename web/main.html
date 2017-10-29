@@ -21,6 +21,20 @@
     	opacity: 0.5;
     	filter: alpha(opacity=50); /* For IE8 and earlier */
 	}
+
+	img.center {
+    	display: block;
+    	margin: 0 auto;
+	}
+
+	.placeholder {
+
+   		background-repeat: no-repeat;
+    	background-size: contain;
+    	background-image: url('img/giphy.gif');
+	}
+
+
 	</style>
 
 </head>
@@ -31,12 +45,12 @@
 				<h1>Pic-a-Vibe</h1>
 				<div class="gallery">
 					<img
+						class="placeholder" 
 						ng-controller="eventController"
-						ng-src="{{x.contentUrl}}" alt=""
+						ng-src="{{x.contentUrl}}" ng-alt="img/no_img.jpg"
 						ng-repeat="x in res" 
-						style="width:300px; height:200px; border-radius: 8px; background: white;
-						margin: 20px 20px"
-						class="img-rounded" 
+						style="width:300px; height:200px; border-radius: 8px;
+						margin: 20px 20px";
 						ng-click="onclick(x.contentUrl)"
 					/>
 			</div>

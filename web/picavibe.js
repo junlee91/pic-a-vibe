@@ -6,7 +6,7 @@ var picaVibe = angular.module('picaVibe', []);
 picaVibe.controller('mainController',
     function mainController($scope, $http) {
         $http({
-            url: "/search/forest",
+            url: "/search/Chicago",
             method: "GET"
         }).then(function successCallback(response) {
             console.log(response);
