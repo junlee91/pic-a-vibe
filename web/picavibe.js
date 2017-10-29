@@ -17,5 +17,5 @@ picaVibe.controller('mainController',
 
 
 
-        
+
     });
