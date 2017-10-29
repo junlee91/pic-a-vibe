@@ -1,4 +1,4 @@
-
+'use strict';
 picaVibe.controller('freeSoundController',
     function freeSoundController($scope, $http) {
         var clientSecret = "GpZKE6sqHZGYDthQstHOZnIZAcp8TUpbBJ9vOW0n";
