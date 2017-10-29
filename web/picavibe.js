@@ -117,8 +117,11 @@ picaVibe.controller('mainController',
                     if(categories[j] === keywords[i].name) {
                         matched.push(keywords[i].name);
                         var ran = Math.floor(Math.random() * files[keywords[i].name].length);
-                        $scope.fileNames.push(files[keywords[i].name][ran]);
-                        break;
+                        if($scope.fileNames.includes(files[keywords[i].name][ran]) === false){
+                            $scope.fileNames.push(files[keywords[i].name][ran]);
+                            break;
+                        }
+
                     }
                 }
             }

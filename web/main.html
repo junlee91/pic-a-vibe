@@ -12,36 +12,47 @@
 	<link rel="stylesheet" href="style.css" />
 
 </head>
+
+
 <body ng-app="picaVibe">
 	<div class="container" align="center" ng-controller="mainController">
-		<h1>Pic-a-Vibe</h1>
-		<div class="row">
-			<div class="input-group">
-				<input type="text" ng-model="userInput" class="form-control" placeholder="eg) City Blue" minlength="3">
+	
+	<!-- Navigation -->
+     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
 
-				<span class="input-group-button">
-					<button class="btn btn-success vibe-button" ng-click="loadPhotos()">vibe</button>
-				</span>
+		<div class="input-group">
+			<div class="col-lg-10 col-sm-10">
+				<input type="text" ng-model="userInput" class="form-control" placeholder="eg) Very large ocean-view house" minlength="3">
 			</div>
-		</div>
+			<div class="col-lg-2 col-sm-2">
+				<span class="input-group-button">
+        			<button class="btn btn-primary" ng-click="loadPhotos()">vibe</button>
+        		</span>
+        	</div>
+        </div>
+    </nav>
+	
+	<div class="container" align="center" style="margin-top: 150px"/>
 		<div class="row">
 			<div class="gallery">
 				<img
 					class="placeholder"
 					ng-src="{{x.contentUrl}}" ng-alt="img/no_img.jpg"
-					ng-repeat="x in res"
+					ng-repeat="x in res" 
 					ng-click="onclick(x.contentUrl)"
 				/>
 			</div>
 		</div>
-		<div class="row" align="center">
-			<div>
-				<audio ng-repeat="file in fileNames" controls loop>
-					<source src="{{file}}">
-				</audio>
-			</div>
+	</div>
+		
+	<div class="row" align="center">
+		<div>
+			<audio ng-repeat="file in fileNames" controls loop>
+				<source src="{{file}}">
+			</audio>
 		</div>
 	</div>
+
 	<script src="vendor/angular.min.js"></script>
 	<script src="picavibe.js"></script>
 </body>
