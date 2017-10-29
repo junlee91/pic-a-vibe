@@ -24,11 +24,16 @@
 				class="img-rounded"
 				style="width:300px; height:200px; border-radius: 8px; margin: 20px 20px"
 				/>
-
+			</div>
 		</div>
-
+		
 	<div ng-controller="freeSoundController" class="row">
-		{{sound}}
+		<div>
+			<audio ng-repeat="file in fileNames" controls loop>
+
+				<source src="{{file}}">
+			</audio>
+		</div>
 	</div>
 	</div>
 	<script src="vendor/angular.min.js"></script>

@@ -3,7 +3,7 @@ picaVibe.controller('freeSoundController',
     function freeSoundController($scope, $http) {
         console.log("free sound controller");
         var files = {
-            "forest": ["216216__crickets.wav", "223640__tree2.wav", "231537__forest.wav", "362253__leaves2.mp3"],
+            "forest": ["216216__crickets.wav", "223640tree2.wav", "231537__forest.wav", "362253__leaves2.mp3"],
             "bird": ["339326__bird.wav", "398736__bird2.wav"],
             "chicken": ["178096__chickens.mp3"],
             "river": ["24511__river.ogg", "145395__river2.wav", "178652_river_train.wav", "182514__frogs.wav"],
@@ -18,7 +18,7 @@ picaVibe.controller('freeSoundController',
             "coffee": ["133097__people chatting.wav", "149466__coffee.wav", "165280__cafe.wav", "334153_glass.mp3"],
             "stream": ["339324__stream.wav", "365921__stream2.wav"],
             "water": ["339324__stream.wav", "365921__stream2.wav"],
-            "trees": ["216216__crickets.wav", "223640__tree2.wav", "231537__forest.wav", "362253__leaves2.mp3"],
+            "trees": ["216216__crickets.wav", "223640tree2.wav", "231537__forest.wav", "362253__leaves2.mp3"],
             "door": ["168650__door.wav", "386770__door creaking.wav"],
             "train": ["157873__train.wav"],
             "rain": ["344430__rain.mp3"],
@@ -60,7 +60,7 @@ picaVibe.controller('freeSoundController',
 
         //var clientSecret = "GpZKE6sqHZGYDthQstHOZnIZAcp8TUpbBJ9vOW0n";
         //var clientId = "cZ7SiCJuAIK9gxZVKx47";
-        var keywords = ["forest", "lol", "ffr", "zz"];
+        var keywords = ["forest", "river", "ffr", "zz"];
         var length = keywords.length;
         var categories = Object.keys(files);
         var matched = [];
@@ -86,6 +86,7 @@ picaVibe.controller('freeSoundController',
 
         var fileNameLength = $scope.fileNames.length;
         for(var i=0; i<fileNameLength; i++) {
+            $scope.fileNames[i] = "vendor/sound/" + $scope.fileNames[i];
             console.log("filename: " + $scope.fileNames[i]);
         }
 

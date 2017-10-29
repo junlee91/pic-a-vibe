@@ -1,5 +1,4 @@
 'use strict';
-console.log("angularjs.js is connected");
 var picaVibe = angular.module('picaVibe', []);
 
 picaVibe.controller('mainController',
