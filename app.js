@@ -83,7 +83,12 @@ app.get('/search/:searchText', function(req, res) {
 
 //app.get('/users/:userId/books/:bookId', function (req, res) {
 app.get('/analyze/:url', function(req, res) {
+<<<<<<< HEAD
     var url = req.param.url;
+=======
+    console.log("this is the backend!!");
+    var url = req.param["url"];
+>>>>>>> master
     console.log(url);
     clarifai.models.predict(Clarifai.GENERAL_MODEL, url).then(
         function(response) {
