@@ -18,3 +18,7 @@ img:hover {
     	background-size: contain;
     	background-image: url('img/giphy.gif');
 }
+
+.vibe-button {
+	margin: 10px;
+}

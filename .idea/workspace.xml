@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30cccfb1-5700-4e8b-8d5b-a4b4de193fac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/main.html" afterPath="$PROJECT_DIR$/web/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/picavibe.js" afterPath="$PROJECT_DIR$/web/picavibe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/style.css" afterPath="$PROJECT_DIR$/web/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -55,18 +55,18 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+            <state relative-caret-position="191">
+              <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="picavibe.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="picavibe.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/picavibe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="67" column="17" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+            <state relative-caret-position="207">
+              <caret line="79" column="74" lean-forward="true" selection-start-line="79" selection-start-column="74" selection-end-line="79" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -105,8 +105,9 @@
       <find>eventS</find>
       <find>$scope.keywords</find>
       <find>tree2</find>
-      <find>keywords</find>
       <find>ng-repeat</find>
+      <find>keywords</find>
+      <find>vibe</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -123,8 +124,9 @@
         <option value="$PROJECT_DIR$/web/event.js" />
         <option value="$PROJECT_DIR$/web/freeSoundController.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/web/main.html" />
         <option value="$PROJECT_DIR$/web/picavibe.js" />
+        <option value="$PROJECT_DIR$/web/main.html" />
+        <option value="$PROJECT_DIR$/web/style.css" />
       </list>
     </option>
   </component>
@@ -359,12 +361,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509140537820</updated>
-      <workItem from="1509140538967" duration="37813000" />
+      <workItem from="1509140538967" duration="38296000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37813000" />
+    <option name="totallyTimeSpent" value="38296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="289" y="23" width="1140" height="742" extended-state="0" />
@@ -445,14 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -485,18 +479,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/main.html">
+    <entry file="file://$PROJECT_DIR$/web/picavibe.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        <state relative-caret-position="207">
+          <caret line="79" column="74" lean-forward="true" selection-start-line="79" selection-start-column="74" selection-end-line="79" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/picavibe.js">
+    <entry file="file://$PROJECT_DIR$/web/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="67" column="17" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+        <state relative-caret-position="191">
+          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding />
         </state>
       </provider>
