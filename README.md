@@ -1,6 +1,6 @@
 # Pic-a-Vibe
 
-##### DemonHacks 2017 Hackathon entry
+### DemonHacks 2017 Hackathon entry
 
 Pic-a-Vibe is a Web service that uses the integration of the the Bing Search API to search for a picture and create a "vibe" experience. 
 The Clarifai API determines key characteristics in the selected picture such as landscapes, bodies of water, animals, and the presence of people. It then generates a list of keywords that can be associated with those descriptions and searches an extensive library of sounds to
@@ -26,4 +26,4 @@ better of a "vibe" the user will experience when utilizing the web service. Futu
 the ability for a user to upload a picture from a local drive to create a vibe as well as a ranked list of past user's "vibes".
 
 
-
+Project Link: https://devpost.com/software/pic-a-vibe
